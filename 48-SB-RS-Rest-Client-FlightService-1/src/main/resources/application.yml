@@ -1,0 +1,13 @@
+#till line 3 only 1 endpoint is exposed that is http://localhost:9090/actuator (/actuators)
+server:
+  port: 9090
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #include all the 13 endpoint urls
+        exclude: beans #this will exclude the endpoint url for beans
+  endpoint:
+    shutdown:
+      enabled: true

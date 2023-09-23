@@ -1,0 +1,19 @@
+#server:
+#  port: 8761
+#  
+# server:
+#  port: 8761 it is the defualt port number one which eureka server runs. so the client get autometically registered at port 8761 
+  
+#If client server are on different machine then configure manually like below
+server:
+  port: 9090
+
+  
+
+eureka: 
+   client:
+      registerWithEureka: false # to make sure that eureka server itself not act as a server (if this is not given then thisapplication itself become client as well)
+      fetchRegistry: false
+
+
+       

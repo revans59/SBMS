@@ -1,0 +1,14 @@
+server:
+  port: 1111
+  
+spring:
+  application:
+    name: WELCOME-API
+  
+  
+#If client server are in different machine then configure manually like below
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DISCOVERY_URL:http://localhost:9090}/eureka/ #app-51 is regidtered manually in the aap-50
+  
